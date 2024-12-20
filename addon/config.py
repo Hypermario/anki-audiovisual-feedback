@@ -6,7 +6,17 @@ from aqt.utils import openFolder
 
 from .ankiaddonconfig import ConfigManager, ConfigWindow
 
+
+conf = ConfigManager()
+
 THEMES_DIR = Path(__file__).parent / "user_files" / "themes"
+CURRENT_THEME_DIR: Path = Path(__file__).parent / "user_files" / "themes" / conf["theme"]
+
+
+def refresh_conf() -> None:
+    global CURRENT_THEME_DIR
+    conf.load()
+    CURRENT_THEME_DIR = Path(__file__).parent / "user_files" / "themes" / conf["theme"]
 
 
 def open_theme_dir() -> None:
@@ -49,14 +59,9 @@ def general_tab(conf_window: ConfigWindow) -> None:
     tab.checkbox("start_effect", "Play feedback on review start ")
     tab.checkbox("review_effect", "Play feedback during review ")
     tab.checkbox("congrats_effect", "Play feedback on completing deck ")
-    tab.number_input(
-        "limit_breaker",
-        "Lower values make it more likely to bring the user into an intermission stage. Set to 0 to disable intermission",
-        maximum=99999,
-    )
+
     tab.stretch()
 
 
-conf = ConfigManager()
 conf.use_custom_window()
 conf.add_config_tab(general_tab)

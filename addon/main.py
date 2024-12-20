@@ -15,7 +15,7 @@ from . import audios
 from .anking_menu import setup_menu
 from .ease import Ease
 
-from config import conf, CURRENT_THEME_DIR, refresh_conf
+from .config import conf, CURRENT_THEME_DIR, refresh_conf
 
 mw.addonManager.setWebExports(__name__, r"user_files/themes/.*")
 

@@ -1,6 +1,5 @@
-Fix for the addon audiovisual feedback, now correctly playing audio when reviewing cards with audio autoplay.
+# Fix for the addon audiovisual feedback, now correctly playing audio when reviewing cards with audio autoplay.
 
--
 
 For add-on description, please see [AnkiWeb page](https://ankiweb.net/shared/info/231569866)
 

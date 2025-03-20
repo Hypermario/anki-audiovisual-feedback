@@ -1,10 +1,10 @@
 {
-  "package": "231569866",
-  "name": "Audiovisual Feedback",
+  "package": "827983630",
+  "name": "Audiovisual Feedback Fix",
   "human_version": "0.8",
-  "display_name": "Audiovisual Feedback",
-  "ankiweb_id": "231569866",
-  "author": "The AnKing",
+  "display_name": "Audiovisual Feedback Fix",
+  "ankiweb_id": "827983630",
+  "author": "The AnKing (fixed by Hypermario)",
   "conflicts": [],
   "min_anki_version": "2.1.36",
   "max_tested_anki_version": "2.1.53"
